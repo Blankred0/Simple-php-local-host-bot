@@ -30,6 +30,8 @@ while loop == "N":
 			time.sleep(5)
 			loop = "N"
 		else :
+			subdomain = ""
+			servelink = "ssh -R " + str(subdomain) + "80:localhost:" + str(random_ports) + " serveo.net"
 			print ("Starting serveo...")
 			print ("Press ctrl + c to exit serveo")
 			serveo_end = subprocess.Popen(servelink, shell=True)
