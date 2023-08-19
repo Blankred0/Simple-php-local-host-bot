@@ -6,9 +6,9 @@ def refresh_page(url):
     try:
         response = requests.get(url)
         response.raise_for_status()
-        print("Page actualisée avec succès.")
+        print("Page succefully refresh !")
     except requests.exceptions.RequestException as e:
-        print("Erreur lors de l'actualisation de la page:", e)
+        print("Error while page refresh", e)
 
 if __name__ == "__main__":
     url_to_refresh = site
