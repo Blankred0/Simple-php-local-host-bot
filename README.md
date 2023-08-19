@@ -4,6 +4,7 @@ To use it, download the file `bot.py` and place it in the folder that contains y
 Navigate to your/folder/path in the terminal and then run `python3 bot.py`. It will generate a link for you to view your PHP file in your web browser.
 Press Enter to stop the server and 'C' to clear the terminal.
 I've just added serveo so it's a little buggy but it works.
+You can avoid your server to crash with sleep.py because he refresh the page every 2 min. ( just do python3 sleep.py and http://yoursubdomain.serveo.net/)
 You can choose the subdomain by genrating a ssh key with this command :
 $ ssh-keygen
 
