@@ -19,3 +19,5 @@ For ubutu it's :
 sudo apt-get update 
 
 sudo apt-get install openssh-server
+
+#Disclaimer: This code is provided for educational purposes only. I am not responsible for any actions taken using this code.
