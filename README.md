@@ -1,6 +1,6 @@
 # Simple-PHP-Local-Host-Bot
 This is a simple local host for PHP written in Python.
-To use it, run the command who follow and place your PHP file in the folder
+To use it, run the command who follow and place your PHP file in the folder of bot.py. The file MUST BE NAMED index.php or serveo can bug and didn't find your file. I placed a index.php file in the the repositories so after testing if everything work please delete it and replace with your php file.
 ```bash
 git clone https://github.com/Blankred0/Simple-php-local-host-bot
 cd Simple-php-local-host-bot/
