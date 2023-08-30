@@ -12,7 +12,7 @@ except:
 red = Col.light_red
 
 banner = pyfiglet.figlet_format("PHP\nLocalhost")
-
+banner_2 = "╔═════════════════════════════════╗\n║ Copyright by Blankred0          ║\n║ https://github.com/Blankred0    ║\n╚═════════════════════════════════╝"
 
 # Tool-made-by-https://github.com/Blankred0
 
@@ -32,6 +32,7 @@ time.sleep(0.1)
 #Entering the main loop
 while True:
 	print(Colorate.Vertical(Colors.blue_to_red, banner, 2))
+	print(Colorate.Vertical(Colors.red_to_blue, banner_2, 2))
 	print (Link)
 	loop = input("\n \nPress [Enter] to stop server\n Type [C] to clear the terminal\n Type [serveo] to expose to the internet\n :")
 	loop = loop.lower()
