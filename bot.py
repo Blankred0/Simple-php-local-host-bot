@@ -1,3 +1,4 @@
+#Importing all of the module
 from pystyle import *
 import subprocess
 import time
@@ -14,10 +15,11 @@ banner = pyfiglet.figlet_format("PHP\nLocalhost")
 
 
 # Tool-made-by-https://github.com/Blankred0
+
+#Creating variables
 random_ports = random.randint(1024, 65536)
 print("Ports aléatoires :", random_ports)
 cmd2 = "clear"
-loop = "N"
 subdomain =""
 servelink = "ssh -R " + str(subdomain) + "80:localhost:" + str(random_ports) + " serveo.net"
 server_start = "php -S localhost:" + str(random_ports)
@@ -27,13 +29,18 @@ Link = ("\nLocal link : http://localhost:" + str(random_ports))
 subprocess.Popen(cmd2, shell=True)
 time.sleep(0.1)
 
+#Entering the main loop
 while True:
 	print(Colorate.Vertical(Colors.blue_to_red, banner, 2))
 	print (Link)
 	loop = input("\n \nPress [Enter] to stop server\n Type [C] to clear the terminal\n Type [serveo] to expose to the internet\n :")
 	loop = loop.lower()
+	
+	#Clearing the screen
 	if loop == "c" :
 		cmd3 = subprocess.Popen(cmd2, shell=True)
+	
+	#Creating the serveo ssh tunnel 
 	elif loop == "serveo":
 		choose_subdomain = input('Do you want to choose your subdomain ?\n [Y]es\n [N]o\n :')
 		if choose_subdomain == "Y" :
@@ -51,6 +58,8 @@ while True:
 			serveo_end = subprocess.Popen(servelink, shell=True)
 			serveo_end.wait()
 			subprocess.Popen(cmd2, shell=True)
+	
+	#Stoping the server
 	elif loop == "":
 		print("Stopping server...")
 		break
