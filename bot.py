@@ -27,14 +27,13 @@ Link = ("\nLocal link : http://localhost:" + str(random_ports))
 subprocess.Popen(cmd2, shell=True)
 time.sleep(0.1)
 
-while loop == "N":
+while True:
 	print(Colorate.Vertical(Colors.blue_to_red, banner, 2))
 	print (Link)
 	loop = input("\n \nPress [Enter] to stop server\n Type [C] to clear the terminal\n Type [serveo] to expose to the internet\n :")
 	loop = loop.lower()
 	if loop == "c" :
 		cmd3 = subprocess.Popen(cmd2, shell=True)
-		loop = "N"
 	elif loop == "serveo":
 		choose_subdomain = input('Do you want to choose your subdomain ?\n [Y]es\n [N]o\n :')
 		if choose_subdomain == "Y" :
@@ -44,7 +43,6 @@ while loop == "N":
 			serveo_end = subprocess.Popen(servelink, shell=True)
 			time.sleep(5)
 			serveo_end.wait()
-			loop = "N"
 		else :
 			subdomain = ""
 			servelink = "ssh -R " + str(subdomain) + "80:localhost:" + str(random_ports) + " serveo.net"
@@ -53,10 +51,9 @@ while loop == "N":
 			serveo_end = subprocess.Popen(servelink, shell=True)
 			serveo_end.wait()
 			subprocess.Popen(cmd2, shell=True)
-			loop = "N"
-
 	elif loop == "":
 		print("Stopping server...")
+		break
 	else:
 		print("You must enter a valid input !")
 		loop = "N"
